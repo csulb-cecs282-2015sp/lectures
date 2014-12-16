@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
    int sizeOfChar = sizeof(char);
    int sizeOfLongLong = sizeof(long long);
 
-   // C++ DOES NOT GUARANTEE the # of bytes for most primitive types. it only
+   // C++ DOES NOT GUARANTEE the # of bytes for most fundamental types. it only
    // makes the following promise:
 
    // sizeOfChar = 1
