@@ -11,10 +11,6 @@ int main(int argc, char* argv[]) {
    double a, b, c;
    cin >> a >> b >> c;
 
-   int g = sqrt(-1);
-
-   cout << g << endl;
-
    double discriminant = b * b - 4 * a * c;
 
    // C++ has the same control structures as Java: if, else, else if.

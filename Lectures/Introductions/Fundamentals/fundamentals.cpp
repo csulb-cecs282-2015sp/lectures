@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
    double asdfadsf = 5.0 * 3 + 5 / 2 - 15.9;
    
    // bool values: true and false
-   bool b = false, c = true, d = false;
+   bool b = false, e = true, f = false;
 
    
 
@@ -34,7 +34,13 @@ int main(int argc, char* argv[]) {
    // any non-zero integer is treated as "true"
    b = 2; // what is b?
    
-   cout << "QUESTION OF THE DAY: " << (b + c + d) << endl;
+
+
+
+   cout << "QUESTION OF THE DAY: " << (b + e + f) << endl;
+   // what is the output?
+
+
 
    // if you involve a bool in arithmetic, it is treated as having a value of 1 
    // if true, and 0 if false.
