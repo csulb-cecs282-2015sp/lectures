@@ -2,24 +2,28 @@
 
 using namespace std;
 int main(int argc, char* argv[]) {
-   // in C, strings are arrays of characters, with the last letter followed by 
-   // the special character '\0', which has an integer value of 0.
-
+   /*
+   In C, strings are arrays of characters, with the last letter followed by the
+   special character '\0' called the "null terminator", which has an integer 
+   value of 0.
+   */
    char cStr[] = {'h', 'e', 'l', 'l', 'o', '\0'}; // this is a "c-string"
 
    cout << cStr << endl; // cout knows how to work with c-strings.
-   // so... how does cout do this printing? C arrays don't know their size...
+   // So... how does cout do this printing? C arrays don't know their size...
 
 
 
-   // like all arrays, I can change the string through indexing.
+
+
+   // Like all arrays, I can change the string through indexing.
    cStr[0] = 'c'; // "cello"
    cStr[4] = 's'; // "cells"
    
-   // can also access individual characters
+   // I can also access individual characters
    cout << cStr[2] << endl; // output?
 
-   // what if I put something in cStr[5]?
+   // What if I put something in cStr[5]?
    cStr[5] = '?'; // "cells?"... or is it?
 
 
