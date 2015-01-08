@@ -24,15 +24,12 @@ int main(int argc, char* argv[]) {
 
 
 
+
+
    // how about other variable types?
    char c = 'A';
    char &refC = c;
    refC = 'M';
-   // on the stack?
-
-
-
-
 
    double pi = 3.14159;
    double &refPi = pi;
@@ -45,7 +42,7 @@ int main(int argc, char* argv[]) {
 
 
    // references must be initialized at the same time they are declared
-   int &z; // error: references must be initialized 
+   // int &z; // error: references must be initialized 
    
    // there is no way to change "who" the variable y refers to once it is set.
    // WHY IS THIS?
@@ -53,12 +50,20 @@ int main(int argc, char* argv[]) {
 
 
 
+   /*
+   Technically these are called "lvalue" ("ell-value") references, because they
+   can only refer to lvalues. We will learn more about lvalues later and how 
+   they differ from rvalues, but for now: lvalues are values that persist beyond
+   a single expression; they are objects that have a name.
+   */
+
 
 
    // how does this affect function parameters?
    FunctionWithoutReference(x); // does this change x?
+   
 
-
+   
    FunctionWithReference(x); // does THIS change x?
 
 
@@ -66,8 +71,10 @@ int main(int argc, char* argv[]) {
 
    
    // can I pass an integer literal to a reference parameter?
-   FunctionWithReference(5); //initial value of reference to non-const must be an lvalue
+   // FunctionWithReference(5); //initial value of reference to non-const must be an lvalue
    // does this make sense?
+
+
 
 
    // reference parameter legitimate use #1: changing multiple variables at once
