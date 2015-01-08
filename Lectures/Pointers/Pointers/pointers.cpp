@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
    // a pointer is a special variable that "points" to another variable.
    // pointers are initialized by assigning the *address* of another variable
 
-   // & is for reference; * is for pointer
+   // When DECLARING a variable, & is for reference; * is for pointer
    int *p;
    // do not need to initialize a pointer, unlike a reference.
 
@@ -26,23 +26,45 @@ int main(int argc, char* argv[]) {
    // WHAT DOES THIS LOOK LIKE ON THE STACK?
    // remember, a pointer's value in memory is always an address
 
+
+
+
+
+
    
-   // to change the VALUE of the thing p points to, we use the * operator to
-   // "de-reference" the pointer.
+   /*
+   To change the VALUE of the thing p points to, we use the * operator on p to
+   "de-reference" the pointer. This gives us access to the actual memory that
+   it points to. We can then read or write to that memory as usual.
+   */
    *p = 10; // this changes the value of the thing that p points to (which is x)
 
    
-   // pointers are type-safe, somewhat: can't assign int* to double*
-   //double *cant = &x; // error: cannot convert from 'int *' to 'double *'
+   // Pointers are type-safe, somewhat: can't assign int* to double*
+   // double *cant = &x; // error: cannot convert from 'int *' to 'double *'
 
-   // but you can assign one pointer to another
+   // But you can assign one pointer to another
    int *otherPointer = p;
-   // this line DECLARES a pointer and INITIALIZES IT to point to the thing 
+   // This line DECLARES a pointer and INITIALIZES IT to point to the thing 
    // p points to.
+   *otherPointer = 100; // what does this change?
+
+   /* 
+   MINI QUIZ:
+   Which of these statements will not compile?
+
+   int *a = &x;
+   int *b = &a;
+   int *c = 10;
+   short *d = &x;
+   int *e = *a;
+   */
 
 
-
-   // so a pointer is kind of like a reference variable
+   /*
+   So a pointer is kind of like a reference variable... in both cases, a change
+   to one variable actually changes another... but with different syntax.
+   */
    int &refToX = x;
    int *ptrToX = &x;
 
@@ -50,24 +72,29 @@ int main(int argc, char* argv[]) {
    refToX = 20;
    *ptrToX = 20; 
 
-   // pointers, unlike references, can have their "target" changed
+   
+   // Pointers, unlike references, can have their "target" changed.
    refToX = y; // LOGIC ERROR: this assigns a copy of y's value to x's value
+   
    ptrToX = &y; // this does not change x's value; it makes ptrToX "point to" y
-   *ptrToX = 40; // now y has value 40, as does (*ptrToX)
+   *ptrToX = 40; 
 
-
+   // What does this output now?
    cout << "X is: " << refToX << endl;
    cout << "*ptrToX is: " << *ptrToX << " -- y is: " << y << endl;
 
-   // pointers can be passed to functions.
+
+
+   /*
+   Pointers can be passed to functions. Like references, this allows the 
+   function to change a parameter so that the caller sees the change.
+   */
    ChangePointer(ptrToX); 
-   // the VALUE of ptrToX gets copied to the function's int* parameter; then...?
+   // The address ptrToX points to is copied to the function's parameter...
+   // then what?
    cout << "After function, *ptrToX == " << *ptrToX << endl;
 
-   // so dereferencing the parameter in the function changed the memory the 
-   // pointer referred to.
-
-   // more common to pass &y directly to the function
+   // It is more common to pass &y directly to the function.
    ChangePointer(&y);
    cout << "After function, y and *ptrToX == " << *ptrToX << " (" << y << ")" 
       << endl;
