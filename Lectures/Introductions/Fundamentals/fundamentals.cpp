@@ -23,8 +23,16 @@ int main(int argc, char* argv[]) {
    double pi = 3.14159;
    double area = pi * y * y; // double * int * int --> double
 
-   double asdfadsf = 5.0 * 3 + 5 / 2 - 15.9;
-   
+
+   // What is the value of this variable?
+   double complicated = 5.0 * 3 + 5 / 2 - 15.9;
+   // Edit this file yourself and cout the variable. Make sure the output is
+   // what you expect.
+
+
+
+
+
    // bool values: true and false
    bool b = false, e = true, f = false;
 
@@ -49,6 +57,8 @@ int main(int argc, char* argv[]) {
    // integer values can be expressed in hex (base 16) or oct (base 8) notation:
    x = 0x2A; // 0x --> start of a hex number
    y = 031;  // 0  --> start of an octal number
+
+
 
    // char types are for characters. character literals are enclosed in ''
    char c = 'A';
