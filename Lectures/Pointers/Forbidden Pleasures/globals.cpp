@@ -11,6 +11,8 @@ void FunctionA();
 int globalX;
 double globalY;
 
+// Visual Studio doesn't like multiple files with a main(), so sometimes I
+// use a slightly different name so the code will compile.
 int mains(int argc, char* argv[]) {
    // unlike normal variables, globals have zeroed initial values
    cout << globalX << endl << globalY << endl; // output: 0 0
