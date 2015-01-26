@@ -2,30 +2,45 @@
 #include <random>
 using namespace std;
 
+// Use of "C-style arrays" / "built-in arrays".
 int main(int argc, char* argv[]) {
-   // declare an array of 11 ints
-   int results[11] = {0}; // NOTE: no "new". the size must be KNOWN at COMPILE TIME.
+   // Declare an array of 5 ints
+   int myArray[5]; // NOTE: no "new". 
+   
+   /* 
+   The size of an array must be KNOWN at COMPILE TIME. We will discuss why
+   in the next file. 
+
+   Arrays have garbage data initially, like any other uninitialized variable.
+   You can "fill" an array with a default value when declaring:
+   */
+   int preFilledArray[11] = { 0 };
+
+   // You can specify the entire of an array's contents.
    
    cout << "Enter array size:";
    int size;
    cin >> size;
-//   int badArray[size]; // error: expression must have a constant value
-
-   // arrays are 0-based for indices
-   results[0] = 100;
-
-   // arrays are NOT BOUNDS-CHECKED
-   //results[12] = 500; // result of this is not defined; anything could happen!
+// int badArray[size]; // error: expression must have a constant value.
+   // REMEMBER: ARRAY SIZE MUST BE KNOWN AT COMPILE TIME
 
 
-   // let's do a real application with arrays: simulate 1,000,000 rolls of a 
-   // pair of dice. keep track of how many times each outcome is rolled.
+
+   // Arrays are 0-based for indices
+   myArray[0] = 100;
+
+   // Arrays are NOT BOUNDS-CHECKED.
+   // myArray[12] = 500; // result of this is not defined; anything could happen!
+
+
+   // Let's do a real application with arrays: simulate 1,000,000 rolls of a 
+   // pair of dice. Keep track of how many times each outcome is rolled.
    random_device rd;
    default_random_engine engine(rd());
    uniform_int_distribution<int> dieRoll(2, 12);
    const int MAX_ROLLS = 1000000;
+   int results[11];
 
-   results[0] = 0;
    for (int i = 0; i < MAX_ROLLS; i++) {
       int die1 = dieRoll(engine), die2 = dieRoll(engine);
       int roll = die1 + die2;
@@ -48,7 +63,7 @@ int main(int argc, char* argv[]) {
    11: 1822893
    12: 19501165
 
-   the heck???
+   What the heck???
    */
 
 
