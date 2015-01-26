@@ -1,5 +1,8 @@
-// global functions
-double Average(int num1, int num2) { // NOTE: no "public" or "static"
+// These functions are global (everyone can use).
+// They are compiled into the final program .exe, but other .cpp files can't
+// "see" them unless they declare the functions first.
+
+double Average(int num1, int num2) {
    return (num1 + num2) / 2.0;
 }
 
@@ -19,3 +22,4 @@ int Pow(int base, int exponent) {
    return result;
 }
 
+// Notice that the Ln function from mymath.h is not defined here.
