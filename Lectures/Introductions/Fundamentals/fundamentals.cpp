@@ -2,7 +2,7 @@
 using namespace std;
 int main(int argc, char* argv[]) {
    // ALL fundamental types in C++:
-   // bool, char, short, int, long, float, double, long long
+   // bool, char, short, int, long, float, double, long long, long doubles
    
    int x = 10; // the number 10 is called a literal
    int y;
@@ -22,6 +22,9 @@ int main(int argc, char* argv[]) {
    // floating point type
    double pi = 3.14159;
    double area = pi * y * y; // double * int * int --> double
+
+
+   int i = 5.5;
 
 
    // What is the value of this variable?
