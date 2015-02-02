@@ -78,7 +78,6 @@
   <ItemGroup>
     <ClCompile Include="intro.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="moremath.cpp" />
     <ClCompile Include="mymath.cpp" />
   </ItemGroup>
   <ItemGroup>

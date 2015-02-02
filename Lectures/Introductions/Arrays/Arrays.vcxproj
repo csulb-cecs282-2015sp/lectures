@@ -78,7 +78,6 @@
   <ItemGroup>
     <ClCompile Include="arrayfunctions.cpp" />
     <ClCompile Include="arrays.cpp" />
-    <ClCompile Include="mymath.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
