@@ -76,7 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Goto\goto.cpp" />
+    <ClCompile Include="goto.cpp" />
     <ClCompile Include="defines.cpp" />
     <ClCompile Include="GlobalFunctions.cpp" />
     <ClCompile Include="globals.cpp" />
