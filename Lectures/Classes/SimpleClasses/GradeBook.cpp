@@ -10,7 +10,7 @@ private:
    // Unlike Java, you do not specify public or private for each item.
    // Everything that follows is private. What does private mean?
 
-   // here we will define the state/member variables of a Gradebook. What kind
+   // Here we will define the state/member variables of a Gradebook. What kind
    // of data makes up a grade book?
 
    // start simple: a string for the name of the course the book is used in
