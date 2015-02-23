@@ -78,6 +78,7 @@ int main_(int argc, char* argv[]) {
 
 
    // how does C++ address these concerns?
+   return 0;
 }
 
 void ChangeTime(Time t) {

@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
 
    // What if I put something in cStr[5]?
    cStr[5] = '?'; // "cells?"... or is it?
-
+   cout << cStr << endl;
 
 
 
