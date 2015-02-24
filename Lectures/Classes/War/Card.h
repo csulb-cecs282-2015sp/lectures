@@ -5,10 +5,6 @@
 
 /*
 This class represents a single playing card in a standard 52-card deck.
-This file contains the declaration of the Card class only. Like a function
-prototype, it will inform the compiler about WHAT a "Card" object is, but not
-necessarily HOW it works. The implementation of the class will come in another
-file.
 */
 class Card {
 private:
