@@ -5,18 +5,15 @@
 
 
 // Class declaration for GradeBook.
+// Add a member variable for the instructor's name, plus some lessons on
+// overloading operators.
 class GradeBook {
 private:
    std::string mCourseName; 
    std::string mInstructorName;
 
 public:
-   // We will see this patten a lot: the "const reference parameter" pattern.
-   // What's the deal?
    GradeBook(const std::string &name, const std::string &instructor);
-   
-
-
 
    // As before.
    void PrintGreeting();
@@ -36,7 +33,6 @@ public:
 
 
    // copy constructor
-   
 
 
 
