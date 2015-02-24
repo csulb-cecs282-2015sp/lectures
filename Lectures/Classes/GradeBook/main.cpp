@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "GradeBook.h"
-// even though GradeBook is implemented in another file, all I need is the .h
+// Even though GradeBook is implemented in another file, all I need is the .h
 // to be able to use it here, as long as every method has an implementation in
 // SOME CPP file.
 
@@ -13,10 +13,6 @@ int main(int argc, char* argv[]) {
 
 
    book.SetCourseName(mainString); 
-   // parameter passed by reference... could it change?
-   book.PrintGreeting(); // what will it print?
-
-
-   string returnString = book.GetCourseName();
-
+   // Parameter passed by reference... could it change?
+   book.PrintGreeting(); // What will it print?
 }
