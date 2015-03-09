@@ -48,5 +48,25 @@ int main() {
 
 
 
+   // One final bug:
+   if (true) {
+      LinkedQueue third;
+      third.Add(5);
+      third.Add(6);
+
+      // What happens when third goes out of scope?
+      
+
+
+
+      // What do we need to fix this?
+
+
+
+
+
+   }
+
+
 
 }
