@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+
+int mains() {
    // Demonstrate that our LinkedQueue works.
    LinkedQueue numbers;
 
@@ -47,7 +48,6 @@ int main() {
 
 
 
-
    // One final bug:
    if (true) {
       LinkedQueue third;
@@ -55,18 +55,19 @@ int main() {
       third.Add(6);
 
       // What happens when third goes out of scope?
-      
-
-
-
       // What do we need to fix this?
-
-
-
-
-
    }
 
+   for (int i = 0; i < 0; i++) {
+      LinkedQueue temp;
+      temp.Add(1);
+      temp.Add(1);
+      temp.Add(1);
+      temp.Add(1);
+      temp.Add(1);
+   }
 
-
+   LinkedQueue empty;
+   cout << empty.Remove();
+   return 0;
 }

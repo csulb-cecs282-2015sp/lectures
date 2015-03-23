@@ -37,6 +37,12 @@ public:
    // Copy construct a queue with a duplicate of other's data.
    LinkedQueue(const LinkedQueue &other);
 
+   // Destructor
+   ~LinkedQueue();
+
+   // Assignment=
+   LinkedQueue& operator=(const LinkedQueue &rhs);
+
    // Add an element to the end of the queue.
    void Add(int data);
    // Remove and return the front element from the queue.
