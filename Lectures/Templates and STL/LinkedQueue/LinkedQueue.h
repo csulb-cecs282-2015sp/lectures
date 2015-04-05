@@ -5,12 +5,11 @@
 // a templated type.
 
 // In a templated class, all functions are defined in the class declaration.
-template <typename TData>
+
+template <typename TData> // this applies to the entire class.
 class LinkedQueue {
 private:
-   // A class to store a piece of data, and a link to the next data in the queue
    class Node {
-   private:
       TData mData; // Note the type is TData
       Node *mNext; 
       friend class LinkedQueue;
@@ -22,13 +21,13 @@ private:
    };
 
 
-   // A linked list is just a pointer to a head node, a pointer to a tail node,
-   // and a count of how many nodes there are.
    Node *mHead;
    Node *mTail;
    int mSize;
 
 public:
+   // Everything that follows is the same as before, except now all parameters
+   // and return types that deal with data items are now of type TData.
    LinkedQueue() : mHead(nullptr), mTail(nullptr), mSize(0) {
    }
 
@@ -99,7 +98,7 @@ public:
       if (mSize == 0) {
          throw std::out_of_range("Queue was empty");
       }
-      int data = mHead->mData;
+      TData data = mHead->mData;
       Node *temp = mHead;
       mHead = mHead->mNext;
       delete temp;
