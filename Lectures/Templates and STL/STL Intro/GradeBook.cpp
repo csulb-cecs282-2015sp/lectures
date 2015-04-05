@@ -80,6 +80,9 @@ bool operator==(const GradeBook &lhs, const GradeBook &rhs) {
 }
 
 GradeBook &GradeBook::operator=(const GradeBook &rhs) {
+   if (this == &rhs)
+      return *this;
+
    mCourseName = rhs.mCourseName;
    mInstructorName = rhs.mInstructorName;
    mNumberOfStudents = rhs.mNumberOfStudents;
@@ -89,6 +92,7 @@ GradeBook &GradeBook::operator=(const GradeBook &rhs) {
    for (int i = 0; i < mNumberOfStudents; i++) {
       mGradesArray[i] = rhs.mGradesArray[i];
    }
+   return *this;
 }
 
 void GradeBook::SetGrade(int index, int value) {
