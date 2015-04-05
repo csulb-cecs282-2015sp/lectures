@@ -12,7 +12,7 @@ private:
    class Node {
       TData mData; // Note the type is TData
       Node *mNext; 
-      friend class LinkedQueue;
+      friend class LinkedQueue<TData>;
 
    public:
       // Initialize a Node with the given data, and a pointer for the next Node.
