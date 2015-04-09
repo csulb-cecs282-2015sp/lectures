@@ -1,3 +1,5 @@
+#include <random>
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -18,6 +20,7 @@ int Median(int a, int b, int c) {
 int mains(int argc, char* argv[]) {
    // Demonstrate Median function.
    cout << "The median of 10, 5, and 2 is " << Median(2, 10, 5) << endl;
+
 
    // SUPPOSE: we want to use Median with the other fundamental types:
    // char, short, long, long long, float, double, long double.
@@ -40,6 +43,9 @@ int mains(int argc, char* argv[]) {
    cout << "The median of 8.5, 10.2, and 4.5 is " <<
       MedianTemplate(8.5, 10.2, 4.5) << endl; // what type is T?
 
+//   MedianTemplate(8, 8.5, 10L);
+
+
    // This works even with non-fundamental types.
    Rational r1(2, 3), r2(8, 3), r3(10, 2);
    cout << "The median of " << r1 << ", " << r2 << ", and " << r3 << " is " <<
@@ -48,6 +54,9 @@ int mains(int argc, char* argv[]) {
    string a = "aaaa", b = "bbbb", c = "bbbc";
    cout << "Medians even work with strings: " << MedianTemplate(a, b, c) << 
       endl;
+
+   uniform_int_distribution<int> x(1, 10);
+   MedianTemplate(x, x, x);
 
    // In your own words, describe ALL TYPES THAT WILL WORK with MedianTemplate.
    // Account for user-defined types like Rational.

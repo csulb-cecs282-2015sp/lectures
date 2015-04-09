@@ -2,6 +2,9 @@
 #define __TEMPLATEHEADERS_H
 
 
+
+
+
 template <typename T>
 T MedianTemplate(T a, T b, T c) {
 /*

@@ -6,13 +6,13 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-   // suppose you want a vector of variables created on the heap.
-   // why would you want this?
+   // Suppose you want a vector of variables created on the heap.
+   // Why would you want this?
 
 
 
 
-   // let's go with a vector of GradeBooks, where the books are on the heap.
+   // Let's go with a vector of 
    vector<GradeBook *> books; // a vector of pointers to books on the heap.
    books.push_back(new GradeBook("CECS 282", "Neal Terrell", 10));
    books.push_back(new GradeBook(*books[0])); // ?
