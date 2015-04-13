@@ -19,11 +19,11 @@ int main() {
    numbers.Add(15);
    numbers.Add(16);
    numbers.Add(23);
-   numbers.Add(42);
-
+   numbers.Add(42.5);
    // Hover over the .Add calls above... what is the method signature?
 
-
+   LinkedQueue<LinkedQueue<int>> whaaaat;
+   whaaaat.Add(numbers);
 
 
    LinkedQueue<string> months;
