@@ -13,15 +13,22 @@ void PrintShape(Shape *s);
 int main(int argc, char* argv[]) {
    // Declare some variables of the Shape classes.
    Circle c(0, 0, 5);
-   Rectangle r(0, 10, 20, 10);
-   Shape s("Trapezoid", 0, 0);
+   Rectangle r(10, 20, 10, 20);
+
+   Shape *c2 = new Triangle(0, 0, 5, 10);
+   
+   cout << endl << endl << endl;
+   
+   delete c2;
+
+   //Rectangle r(0, 10, 20, 10);
 
    // We will now print out some information about a Shape object. Since we want
    // to work with all Shape-derived classes, we take a Shape* parameter via the
    // magic of polymorphism.
-   PrintShape(&c);
-   PrintShape(&r);
-   PrintShape(&s);
+   //PrintShape(&c);
+   //PrintShape(&r);
+//   PrintShape(&s);
 }
 
 
@@ -41,7 +48,7 @@ void PrintShape(Shape *s) {
    // will not let me call GetArea, even if we *know* that s points to something
    // that DOES have a GetArea.
 
-
+   /*
    // First attempt at printing the area: downcasting.
    // Ask the shape for its name, and then down-cast the pointer to an 
    // appropriate type.
@@ -54,7 +61,7 @@ void PrintShape(Shape *s) {
       cout << "; area " << rPtr->GetArea() << endl;
    }
    // What are the weaknesses of this approach?
-
+   */
 
 
 
@@ -76,14 +83,14 @@ void PrintShape(Shape *s) {
 
 
 
-   // This takes us to virtual functions.
+   // This takes us to virtu  al functions.
    // 1. Add keyword "virtual" to Shape's GetArea function. What does this mean?
 
 
 
 
    // 2. Now call GetArea on the Shape pointer. Whose GetArea is called?
-   cout << "; area " << s->GetArea() << endl;
+//   cout << "; area " << s->GetArea() << endl;
 
 
 
