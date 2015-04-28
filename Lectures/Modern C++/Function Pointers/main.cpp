@@ -14,7 +14,7 @@ int Max(int, int);
 int ApplyFunction(int, int, std::function<int(int, int)>);
 int Fold(std::vector<int> &, int, std::function<int(int, int)>);
 
-int main(int argc, char* argv[]) {
+int _main(int argc, char* argv[]) {
    /*
    C and C++ have always provided a way of declaring a "pointer to a function."
    Such pointers do not point to a *value* in memory, but instead point to the
@@ -112,6 +112,8 @@ int main(int argc, char* argv[]) {
    product = std::accumulate(values.begin(), values.begin() + 3, 1, Mult);
    cout << "The accumulate product is " << product << endl;
    // Isn't that beautiful?
+
+   return 0;
 }
 
 int Add(int first, int second) {
