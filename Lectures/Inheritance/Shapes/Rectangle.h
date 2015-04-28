@@ -22,7 +22,7 @@ public:
    }
 
    // Space for later.
-   virtual ~Rectangle() {
+   ~Rectangle() {
       std::cout << "Destruct Rectangle" << std::endl;
    }
 

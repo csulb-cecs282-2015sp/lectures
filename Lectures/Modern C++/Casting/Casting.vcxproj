@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{61557DBA-C953-4A4E-AB64-1DB8CBF004AD}</ProjectGuid>
+    <ProjectGuid>{1864AD22-EC76-47BD-8965-49DA98270896}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>FunctionPointers</RootNamespace>
+    <RootNamespace>Casting</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -78,8 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="morefunctions.cpp" />
+    <ClCompile Include="casts.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

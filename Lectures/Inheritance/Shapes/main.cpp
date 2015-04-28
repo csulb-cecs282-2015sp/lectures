@@ -13,15 +13,13 @@ void PrintShape(Shape *s);
 int main(int argc, char* argv[]) {
    // Declare some variables of the Shape classes.
    Circle c(0, 0, 5);
-   Rectangle r(10, 20, 10, 20);
+   Rectangle r(0, 10, 20, 10);
 
-   Shape *c2 = new Triangle(0, 0, 5, 10);
-   
-   cout << endl << endl << endl;
-   
-   delete c2;
+   Shape *t = new Triangle(0, 0, 10, 20);
 
-   //Rectangle r(0, 10, 20, 10);
+   cout << endl << endl;
+
+   delete t;
 
    // We will now print out some information about a Shape object. Since we want
    // to work with all Shape-derived classes, we take a Shape* parameter via the

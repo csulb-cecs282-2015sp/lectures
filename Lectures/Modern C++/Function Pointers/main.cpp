@@ -50,6 +50,7 @@ int main(int argc, char* argv[]) {
 
    // Syntax: std::function<RETURN_TYPE (PARAMETERS)>
    std::function<int (int, int)> func = Add;
+   
    // func can now be invoked like a function.
    cout << func(10, 5) << endl;
 

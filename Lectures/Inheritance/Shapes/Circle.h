@@ -23,7 +23,7 @@ public:
    }
 
    // Space for later.
-   virtual ~Circle() {
+   ~Circle() {
       std::cout << "Destruct Circle" << std::endl;
    }
 

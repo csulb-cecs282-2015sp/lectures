@@ -34,6 +34,8 @@ public:
       o << "I am a Liger with " << mNumberOfStripes << " stripes. I am " << 
        (mIsKing ? "the king." : "not the king. ");
 
+      o << mSpecies;
+
       return o.str();
    }
 };

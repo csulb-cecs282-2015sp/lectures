@@ -34,13 +34,14 @@ public:
       //mSpecies = "Liger";
       // error: mSpecies is ambiguous... why?
    }
+
 };
 
 
-int mains() {
+int main() {
    Liger a;
    cout << "Speak, Liger!";
-   //auto x = &a;
+   a.Speak();
 
    
    //pc->Speak();
