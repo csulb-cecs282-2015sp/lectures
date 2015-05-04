@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) {
 
    // This all ties together to allow EXCELLENT, heap-safe code using auto_ptr.
    // Here's how we used to do OthelloMoves on the heap in Project 2:
-
+   /*
    string userInput;
    if (userInput.find("move") == 0) {
       OthelloMove *m = board.CreateMove();
@@ -164,5 +164,5 @@ int main(int argc, char* argv[]) {
    // up in OthelloBoard's destructor! But if mHistory contains unique_ptrs, 
    // they will automatically destruct when the board gets destructed! 
          
-
+         */
 }
